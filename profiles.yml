@@ -1,0 +1,12 @@
+redshift:
+  outputs:
+    redshift:
+      dbname: dc_frontendtest_003
+      host: datachannel-dev-3.ca0fbmphxrad.us-east-1.redshift.amazonaws.com
+      password: RBo1tG9p86fo61ni
+      port: 5439
+      schema: dc_dc_frontendtest_003
+      sslmode: require
+      type: redshift
+      user: load_user_dc_frontendtest_003
+  target: redshift
