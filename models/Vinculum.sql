@@ -30,7 +30,7 @@ finalTable as (
     on SkuDetails.skucode = Inventory.skucode
 
     full outer join
-    on SkuDetails.skucode = ReturnToVendor
+    on SkuDetails.skucode = ReturnToVendor.skucode
 )
 
 select * from finalTable
