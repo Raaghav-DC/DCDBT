@@ -26,10 +26,10 @@ finalTable as (
 
     from SkuDetails 
 
-    full outer join 
+    full outer join Inventory
     on SkuDetails.skucode = Inventory.skucode
 
-    full outer join
+    full outer join ReturnToVendor
     on SkuDetails.skucode = ReturnToVendor.skucode
 )
 
