@@ -1,3 +1,5 @@
+Drop finalTable if exists; 
+
 with SkuDetails as (
 
     select * from dc_dc_frontendtest_003.vin_sku_details_kr_2
