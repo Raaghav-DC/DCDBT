@@ -1,5 +1,4 @@
 name: 'DCDBT'
 
 version: '1.0.0'
-project-config: 1
 profile: 'redshift'
