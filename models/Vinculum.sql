@@ -27,7 +27,7 @@ finalTable as (
     select
         SkuDetails.skucode,  SkuDetails.skuname, SkuDetails.classification, SkuDetails.mrp, SkuDetails.saleprice, SkuDetails.basecost,
         Inventory.location, Inventory.qty,
-        ReturnToVendor.reason, ReturnToVendor.size
+        ReturnToVendor.reason, ReturnToVendor.size, ReturnToVendor.committedqty
 
     from SkuDetails 
 
