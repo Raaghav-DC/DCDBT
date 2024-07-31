@@ -27,7 +27,7 @@ finalTable as (
     select
         OrderDetails.amazon_order_id,  OrderDetails.purchase_date, OrderDetails.order_status, OrderDetails.product_name, OrderDetails.item_price, OrderDetails.ship_state,
         Inventory.starting_warehouse_balance, Inventory.ending_warehouse_balance,
-        SellerReturns.order_id, SellerReturns.product_name, SellerReturns.quantity
+        SellerReturns.order_id, SellerReturns.product_name as product_name_seller, SellerReturns.quantity
 
     from OrderDetails 
 
