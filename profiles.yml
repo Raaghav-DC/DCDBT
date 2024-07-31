@@ -1,12 +1,48 @@
-redshift:
+bigquery-sc:
+  target: dev
   outputs:
-    redshift:
-      dbname: dc_frontendtest_003
-      host: datachannel-dev-3.ca0fbmphxrad.us-east-1.redshift.amazonaws.com
-      password: RBo1tG9p86fo61ni
-      port: 5439
-      schema: dc_dc_frontendtest_003
-      sslmode: require
-      type: redshift
-      user: load_user_dc_frontendtest_003
-  target: redshift
+    dev:
+      type: bigquery
+      method: service-account-json
+      project: "datachannel-237710"
+      dataset: "dc_dc_frontendtest_004"
+      threads: 1
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: staging-bq-gcs@datachannel-237710.iam.gserviceaccount.com
+        client_id: '101668296921377539995'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/staging-bq-gcs%40datachannel-237710.iam.gserviceaccount.com
+        private_key: |
+          -----BEGIN PRIVATE KEY-----
+          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnCDOX30vyl0Cq
+          kwspTNrC0fD+lfGGAbv7u+RrhMSLcyRqjG9faR5psH6nHF2NVSGMh6TMyR76SeJd
+          QaR1FhjwM8JYCJxlQOaZYjslS0ALOJcTl/765+baCTQUb7GOnhP0vN22lyhXKwo3
+          QZ8E4KCbLUDjLVfV1F7xOcEwOsNp7vgjKq2+dBlaT2vq6Q7jpU+HZLgEw6zV+5lK
+          IwnVyrH72lo2R7z1fo8GFWA1MEBxuhYSngOzJAB898CRyVMZ1MUaRZZExkR4ld+p
+          2g+QKJd+cYseGQwJf6l6c0/okqOGcthxuAFn9gH06XjkTYwi/QNTFRaSKt33aVqy
+          dyDedZWNAgMBAAECggEABC03kwzdmo2PK6S9IvV9w+DZiJgpv6rT70XBvrGFc6I3
+          ryVfVJCtlsF3zUhvi2ztR5UNuSQvTt1hmGjfiqD4kysMKUTf2kVO7tduuK5CxfUO
+          jAohMVdypZGU2Iz5cOJBh/1gAuSROOrF2N9ecVIHmhG93WBhIaLrk9cYnlLd14x8
+          ifZq/2cmbzJ0Rvv8NUKOPbf6RUhwSfL3+CKC7W40w0/Amu5U2XNJJ6JFR6M6nPZS
+          yr1vD92y2zQLureCfPy5zzb3u2uRT5tAJLtcKn0vhRq1VKQs+SEsMqWvBQIFTT5A
+          IMiWI+Ew1e52vg2YCF5JnuSN0zUZqVmPJgBzcR7HkQKBgQDkXNNBJ1TZ2NWwVn6e
+          tuHt0/27lnvSBdNaiIuTU27F9Mk6nCmkApbNVYX1PSDTJVn3TIM6VSQZVVI5UWgE
+          jK11ehGBi3wCOMFtEIfv52YmEpKXEiTkcFH8eNkslnLyq/tpTO+PqSDcJHyFPTbC
+          4ZoBeTaaOjH6fn0KCdq8s7G0fQKBgQC7PziJ3q9sISV1NrkQLjTBdTGjxrSl/Yl2
+          tGT0x8bIck6lkXUa+YX81IpusYbuu6aSwToFlLZ8R2m1N1w8oEG0URNSpGNpoLaw
+          OqcpGEhHvo1NHRj3AaAhpm3dEk2R9ZncaXIbhOcUOH9HsdC/p2ydxCCwArCKq8a0
+          yLKpNCSCUQKBgHHMvE3knsks4FhO0iyfsHkHQpN/y1Z/JrMgBoY1dqdZdAosFigw
+          ThwnOWlbvAbcvzeYvnCMS0AAn8gGhFJ4FFzNpvmqm/Kze9iw+z0XUHU6niiAlzfr
+          rT+mrXslwkSiZdg0ydEKlGCAIjl3ptl4+XkwgYBb7doJvKALByEwXyc1AoGAYsvZ
+          tgzz/BaFIBJulNX8afK+7U4DtO1QYXyPJARgoxSE4KEd68yqYJt4Ky2qJz6FhjtD
+          tPwhSPOZF8+M8EQSRuTcUCeCeJIesl9QIcO5J3moLn7i1DlcV0TsBNAKc6/lrcFJ
+          PrHiBu5EYfy1Sto42glIwfW5VoGKB4s5kUN82/ECgYEAt9ZO2Kt0FhRr+TnviOTS
+          cpa+nyO8XgwbZrQNw4mkdgQ2wjHMxZPiZgxXyt00yJW2j+ku8K99kkrGYWMmykz4
+          qOAJ0mAUCP6d/EU3T9AtVyle0Inmc8wBKdFUD0EzrkhXTQuFTI+iVSUXdtG58pAH
+          NFPtjcO1VR7oq10BAGCvusw=
+          -----END PRIVATE KEY-----
+        private_key_id: cc4ad2ae3b7a2fe3a2233021d74f53647b420718
+        project_id: datachannel-237710
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
