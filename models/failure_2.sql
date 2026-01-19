@@ -1,7 +1,5 @@
 {{ config(
-    materialized = 'table',
-    schema = 'dc_dc_frontendtest_004',
-    alias = 'failure_2'
+    materialized = 'table'
 ) }}
 
 SELECT *
