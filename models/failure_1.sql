@@ -1,5 +1,6 @@
 {{ config(
-    materialized = 'table'
+    materialized = 'view,
+    alias = 'failure_1'
 ) }}
 
 SELECT *
