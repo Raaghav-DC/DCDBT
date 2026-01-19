@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'view,
+    materialized = 'view',
     alias = 'failure_1'
 ) }}
 
